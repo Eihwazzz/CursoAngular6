@@ -1,7 +1,15 @@
-<h2>
-  Curso
-</h2>
-<ul><strong>Nombre:</strong> {{ curso.nombre }}</ul>
-<ul><strong>Cantidad de clases:</strong> {{ curso.cantidadClases }}</ul>
-<ul><strong>Horario:</strong> {{ curso.horario}}</ul>
-<ul><strong>Dias:</strong> {{ curso.horario}}</ul>
+<div class="d-flex">
+  <ul class="list-group flex-column bd-highlight">
+      <h2 class="text-center">
+          Curso
+      </h2>
+    <li class="list-group-item p-2 bd-highlight"><strong>Nombre:</strong> {{ curso.nombre }}</li>
+    <li class="list-group-item p-2 bd-highlight"><strong>Cantidad de clases:</strong> {{ curso.cantidadClases }}</li>
+    <li class="list-group-item p-2 bd-highlight"><strong>Horario:</strong> {{ curso.horario}}</li>
+    <li class="list-group-item p-2 bd-highlight"><strong>Dias:</strong> 
+      <ul>
+        <li *ngFor="let dia of curso.dias">{{ dia}}</li>
+      </ul>
+    </li>
+  </ul>
+</div>

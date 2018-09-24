@@ -25,6 +25,6 @@ export class AppComponent {
     "nombre": "Angular 6",
     "cantidadClases": 14,
     "horario": '18-22',
-    "dias":['Lunes']
+    "dias":['Lunes','Miercoles','Jueves']
   }
 }

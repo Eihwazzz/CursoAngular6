@@ -1,6 +1,10 @@
-<h2>
-  Docente
-</h2>
-<ul><strong>Nombre:</strong> {{ docente.nombre }}</ul>
-<ul><strong>Apellido:</strong> {{ docente.apellido }}</ul>
-<ul><strong>Fecha de Nacimiento:</strong> {{ docente.fechaNacimiento | date : 'd/M/yyyy'}}</ul>
+<div class="d-flex">
+  <ul class="list-group flex-column bd-highlight">
+      <h2 class="text-center">
+          Docente
+      </h2>
+    <li class="list-group-item p-2 bd-highlight"><strong>Nombre:</strong> {{ docente.nombre }}</li>
+    <li class="list-group-item p-2 bd-highlight"><strong>Apellido:</strong> {{ docente.apellido }}</li>
+    <li class="list-group-item p-2 bd-highlight"><strong>Fecha de Nacimiento:</strong> {{ docente.fechaNacimiento | date : 'd/M/yyyy'}}</li>
+  </ul>
+</div>
