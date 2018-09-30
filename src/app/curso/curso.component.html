@@ -11,5 +11,11 @@
         <li *ngFor="let dia of curso.dias">{{ dia}}</li>
       </ul>
     </li>
+    <li class="list-group-item p-2 bd-highlight">
+      <strong>Estado:</strong>
+      <select (change)="cambiarEstado($event.target.value)">
+        <option [value]="estado" *ngFor="let estado of estados;">{{estado}}</option>
+      </select>
+    </li>
   </ul>
 </div>

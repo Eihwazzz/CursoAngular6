@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IAlumno } from './alumno/ialumno';
 import { IDocente } from './docente/idocente';
 import { ICurso } from './curso/icurso';
+import { Estado } from './curso/estado.enum';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ export class AppComponent {
     "nombre": "Angular 6",
     "cantidadClases": 14,
     "horario": '18-22',
-    "dias":['Lunes','Miercoles','Jueves']
+    "dias":['Lunes','Miercoles','Jueves'],
+    "estado":Estado.ACTIVO
   }
 }
