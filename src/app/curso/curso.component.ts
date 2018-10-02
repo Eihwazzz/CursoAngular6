@@ -24,13 +24,13 @@ export class CursoComponent implements OnInit {
   cambiarEstado(selectedValue:number){
     console.log(selectedValue);
     if(selectedValue == 1){
-      this.clase = "panel panel-default";
+      this.clase = "list-group list-group-item list-group-item-success";
     }
     if(selectedValue == 2){
-      this.clase = "panel panel-primary";
+      this.clase = "list-group list-group-item list-group-item-danger";
     }
     if(selectedValue == 3){
-      this.clase = "panel panel-danger";
+      this.clase = "list-group list-group-item list-group-item-primary";
     }
     //console.log('value is ',selectedValue);
     this.cambioEstado.emit(selectedValue);

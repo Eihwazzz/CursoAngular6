@@ -6,4 +6,5 @@ export interface ICurso {
     horario:string;
     dias:string[];
     estado:Estado;
+    descripcionEstado:String;
 }
