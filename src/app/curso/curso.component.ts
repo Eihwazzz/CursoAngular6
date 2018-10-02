@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, HostBinding } from '@angular/core';
 import { ICurso } from './icurso';
 import { Estado } from './estado.enum';
 
@@ -10,16 +10,30 @@ import { Estado } from './estado.enum';
 export class CursoComponent implements OnInit {
 
   @Input() curso: ICurso;
+  @Output() cambioEstado = new EventEmitter();
 
-  estados = [];
+  @HostBinding('attr.class') clase;
+
+  //estados = [];
   
 
   constructor() { 
-    this.estados = Object.keys(Estado);
+    //this.estados = Object.keys(Estado);
   }
 
-  cambiarEstado(selectedValue:string){
-    console.log('value is ',selectedValue);
+  cambiarEstado(selectedValue:number){
+    console.log(selectedValue);
+    if(selectedValue == 1){
+      this.clase = "panel panel-default";
+    }
+    if(selectedValue == 2){
+      this.clase = "panel panel-primary";
+    }
+    if(selectedValue == 3){
+      this.clase = "panel panel-danger";
+    }
+    //console.log('value is ',selectedValue);
+    this.cambioEstado.emit(selectedValue);
   }
 
   ngOnInit() {

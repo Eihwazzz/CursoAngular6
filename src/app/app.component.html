@@ -24,4 +24,4 @@
 
 <app-docente [docente]="unDocente"></app-docente>
 
-<app-curso [curso]="unCurso"></app-curso>
+<app-curso [curso]="unCurso" (cambioEstado)="cambiarEstado($event)"></app-curso>
