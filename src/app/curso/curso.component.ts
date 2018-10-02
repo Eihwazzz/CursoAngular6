@@ -22,21 +22,24 @@ export class CursoComponent implements OnInit {
   }
 
   cambiarEstado(selectedValue:number){
-    console.log(selectedValue);
-    if(selectedValue == 1){
-      this.clase = "list-group list-group-item list-group-item-success";
-    }
-    if(selectedValue == 2){
-      this.clase = "list-group list-group-item list-group-item-danger";
-    }
-    if(selectedValue == 3){
-      this.clase = "list-group list-group-item list-group-item-primary";
-    }
-    //console.log('value is ',selectedValue);
+    //console.log(selectedValue);
+    this.setHostClass(selectedValue);
     this.cambioEstado.emit(selectedValue);
   }
 
   ngOnInit() {
+    this.setHostClass(this.curso.estado);
   }
 
+  setHostClass(value: number){
+    if(value == 1){
+      this.clase = "list-group list-group-item list-group-item-success";
+    }
+    if(value == 2){
+      this.clase = "list-group list-group-item list-group-item-danger";
+    }
+    if(value == 3){
+      this.clase = "list-group list-group-item list-group-item-primary";
+    }
+  }
 }
