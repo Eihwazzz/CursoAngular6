@@ -33,15 +33,13 @@ export class AppComponent {
       "cantidadClases": 14,
       "horario": '18-22',
       "dias":['Lunes','Miercoles','Jueves'],
-      "estado":Estado.Activo,
-      "descripcionEstado":Estado[Estado.Activo]
+      "estado":Estado.Activo
     }
   }
 
   cambiarEstado(estadoACambiar:Estado){
     //this.unCurso.estado = Estado[estadoACambiar];
     this.unCurso.estado = <Estado>estadoACambiar;
-    this.unCurso.descripcionEstado = Estado[estadoACambiar];
   }
   
 }

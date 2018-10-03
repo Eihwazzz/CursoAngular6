@@ -11,7 +11,7 @@
         <li *ngFor="let dia of curso.dias">{{ dia}}</li>
       </ul>
     </li>
-    <li class="list-group-item p-2 bd-highlight"><strong>Estado:</strong> {{ curso.descripcionEstado}}</li>
+    <li class="list-group-item p-2 bd-highlight"><strong>Estado:</strong> {{ estadoVariable[curso.estado]}}</li>
     <li class="list-group-item p-2 bd-highlight">
       <strong>Cambiar Estado:</strong>
       <select (change)="cambiarEstado($event.target.value)">

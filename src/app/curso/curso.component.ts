@@ -13,7 +13,7 @@ export class CursoComponent implements OnInit {
   @Output() cambioEstado = new EventEmitter();
 
   @HostBinding('attr.class') clase;
-
+  public estadoVariable = Estado;
   //estados = [];
   
 
