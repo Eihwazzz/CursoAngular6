@@ -11,7 +11,11 @@
 <!-- Carga del servidor todo de nuevo-->
 <!--a href="home">Home</a>&nbsp;<a href="items">Items</a-->
 
-<a [routerLink]="['/home']">Home</a>&nbsp;<a [routerLink]="['/items']">Items</a>
+<a [routerLink]="['/home']">Home</a>
+&nbsp;
+<a [routerLink]="['/items']">Items</a>
+&nbsp;
+<a [routerLink]="['/items', 1]">Item</a>
 
   <router-outlet></router-outlet>
 <!--h2>Here are some links to help you start: </h2>
