@@ -1,5 +1,12 @@
 <p>
-  cursos works!
+  Cursos works!
   <a [routerLink]="['/cursos',1]">Curso 1</a>
   <a [routerLink]="['/cursos',2]">Curso 2</a>
 </p>
+<div>
+  <ul>
+    <li *ngFor="let curso of cursos;">{{curso}}
+
+    </li>
+  </ul>
+</div>

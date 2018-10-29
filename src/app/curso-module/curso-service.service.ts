@@ -9,23 +9,19 @@ import { map } from 'rxjs/operators';
 })
 export class CursoServiceService {
 
-  private http : HttpClient;
+  
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  private _getCursos():Observable<ICurso[]>{
+  public _getCursos():Observable<ICurso[]>{
     return this.http.get('http://demo3744158.mockable.io/cursos').pipe(
       map( ( response:Array<ICurso> ) => {
         return response.map( (curso: ICurso) => {
-          
+
           return curso;
         });
       })		
     );
-  }
-
-  public getCursos(){
-    this._getCursos();
   }
 
 }

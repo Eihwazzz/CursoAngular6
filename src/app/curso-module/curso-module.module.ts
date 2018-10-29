@@ -5,11 +5,13 @@ import { CursoComponent } from 'src/app/curso-module/curso/curso.component';
 import { RouterModule } from '@angular/router';
 import { CursoContainerComponent } from './curso-container/curso-container.component';
 import { CursoServiceService } from './curso-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   declarations: [
     CursosComponent,
