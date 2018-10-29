@@ -24,15 +24,18 @@ export class AppComponent {
       "fechaNacimiento": new Date("04/25/1985")
     }
     this.unDocente = {
+      "id":1,
       "nombre": "Juan",
-      "apellido": "Perez",
-      "fechaNacimiento": new Date("03/15/1975")
+      "apellido": "Perez"
     }
     this.unCurso = {
-      "nombre": "Angular 6",
-      "cantidadClases": 14,
-      "horario": '18-22',
-      "dias":['Lunes','Miercoles','Jueves'],
+      "id":1,
+      titulo:"Curso de Angular 6",
+      fechaInicio:1540763104005,
+      fechaFin:1540763104005,
+      asistentes:["Peres Maria Sol, Radoner Mariano"],
+      profesor:this.unDocente,
+      laboratorio:7,
       "estado":Estado.Activo
     }
   }

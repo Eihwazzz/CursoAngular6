@@ -1,9 +1,12 @@
-import { Estado } from "./estado.enum";
+import { IDocente } from "src/app/docente/idocente";
 
 export interface ICurso {
-    nombre:string;
-    cantidadClases:number;
-    horario:string;
-    dias:string[];
-    estado:Estado;
+    id:number;
+    titulo:string;
+    fechaInicio:number;
+    fechaFin:number;
+    asistentes:string[];
+    profesor:IDocente;
+    laboratorio:number;
+    estado:number;
 }
